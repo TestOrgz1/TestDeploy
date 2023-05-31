@@ -2,8 +2,8 @@ name: ci
 
 on:
   push:
-    branches: [main]
-    branches-ignore:
+    branches:
+      - main
       - release/**
   pull_request:
     branches: [main]

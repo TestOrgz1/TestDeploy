@@ -3,10 +3,12 @@ name: ci
 on:
   push:
     branches:
-      - main
-      - release/**
+      - 'main'
+      - '!release/**'
   pull_request:
-    branches: [main]
+    branches:
+      - 'main'
+      - '!release/**'
 
 jobs:
   build:
@@ -45,3 +47,8 @@ jobs:
       - uses: fastify/github-action-merge-dependabot@v3
         with:
           use-github-auto-merge: true
+  test-job:
+    if: contains(github.event.commits[-1].message , '[OPTIC-RELEASE-AUTOMATION]')!=true
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'hello michael -----------'

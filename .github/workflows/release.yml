@@ -9,9 +9,9 @@ on:
         type: choice
         options:
           - prerelease
-          - prepatch
-          - premajor
-          - preminor
+          - patch
+          - major
+          - minor
       release:
         type: boolean
         default: false

@@ -12,4 +12,4 @@ jobs:
       - name: Set Output
         id: set-output
         run: |
-          echo "::set-output name=myVariable::My Value"
+          echo '::set-output name=myVariable::My Value'

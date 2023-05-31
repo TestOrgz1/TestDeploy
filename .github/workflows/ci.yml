@@ -32,16 +32,16 @@ jobs:
         run: echo '${{ toJSON(strategy) }}'
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
-#   deploy app:
-#     steps:
-#     run: |
-#       echo "deploying app"
+    #   deploy app:
+    #     steps:
+    #     run: |
+    #       echo "deploying app"
 
-# automerge:
-#   needs: [build]
-#   runs-on: ubuntu-latest
-#   permissions:
-#     pull-requests: write
-#     contents: write
-#   steps:
-#     - uses: fastify/github-action-merge-dependabot@v3
+  automerge:
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v3

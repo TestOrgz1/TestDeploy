@@ -13,8 +13,3 @@ jobs:
       - name: Write echo
         run: |
           echo "this is echoworking yah boi" ${{ inputs.release }}
-
-      - name: My Step
-        id: my-step
-        run: |
-          echo "Received value: ${{ github.event.workflow_run.outputs.myVariable }}"

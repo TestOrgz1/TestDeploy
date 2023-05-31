@@ -39,5 +39,5 @@ jobs:
       - uses: nearform-actions/optic-release-automation-action@v4
         with:
           semver: auto
-  # second-job:
+  # second-job :
   #   if: github.pull_request.types==closed

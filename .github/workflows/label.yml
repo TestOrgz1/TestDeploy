@@ -18,6 +18,6 @@ jobs:
       - name: Actions Ecosystem Add Labels
         uses: actions-ecosystem/action-add-labels@v1.1.0
         with:
-          token: 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
+          github_token: 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
           labels: |
             documentation

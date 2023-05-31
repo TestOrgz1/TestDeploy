@@ -9,7 +9,7 @@ jobs:
   add_labels:
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: read|write
+      pull-requests: write
     steps:
       - name: checkout
         uses: actions/checkout@v3

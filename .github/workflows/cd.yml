@@ -2,9 +2,10 @@ name: cd
 
 on:
   push:
-    branches: [main]
-    branches-ignore:
-      - release/**
+    branches:
+      - 'main'
+      - 'releases/**'
+
   workflow_dispatch:
 
 jobs:

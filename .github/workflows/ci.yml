@@ -48,7 +48,7 @@ jobs:
         with:
           use-github-auto-merge: true
   test-job:
-    if: contains(github.event.commits[-1].message , '[OPTIC-RELEASE-AUTOMATION]')!=true
+    if: contains(github.event.commits[1].message , '[OPTIC-RELEASE-AUTOMATION]')!=true
     runs-on: ubuntu-latest
     name: 'echoing'
     steps:

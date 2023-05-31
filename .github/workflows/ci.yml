@@ -52,3 +52,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'hello michael -----------'
+      - run: echo '${{ github.event.commits[-1].message }}'
+      - run: echo '${{ github.event.commits[0].message }}'
+      - run: echo '${{ github.event.commits[1].message }}'

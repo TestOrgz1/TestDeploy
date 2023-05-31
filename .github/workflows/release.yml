@@ -39,5 +39,5 @@ jobs:
       - uses: nearform-actions/optic-release-automation-action@v4
         with:
           semver: auto
-      - name: Save state
-        run: echo "::save-state name={name}::{value}"
+      - name: Set Output
+        run: echo "::set-output name=GitTest::Yah"

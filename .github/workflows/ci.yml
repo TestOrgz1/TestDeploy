@@ -52,11 +52,11 @@ jobs:
     runs-on: ubuntu-latest
     name: 'echoing'
     steps:
-      name: 'echoing'
-        - run: echo 'hello michael -----------'
-      name: '-1'
-      - run: echo '${{ github.event.commits[-1].message }}'
+      - name: 'echoing'
+        run: echo 'hello michael -----------'
+      - name: '-1'
+        run: echo '${{ github.event.commits[-1].message }}'
       - name: '0'
-      - run: echo '${{ github.event.commits[0].message }}'
+        run: echo '${{ github.event.commits[0].message }}'
       - name: '1'
-      - run: echo '${{ github.event.commits[1].message }}'
+        run: echo '${{ github.event.commits[1].message }}'

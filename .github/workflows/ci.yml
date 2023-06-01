@@ -64,7 +64,6 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-      issues: write
     steps:
       - name: checkout
         uses: actions/checkout@v3

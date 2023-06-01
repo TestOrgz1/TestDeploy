@@ -9,6 +9,7 @@ on:
 
 jobs:
   my-job:
+    if: github.event.pull_request.labels.name
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

@@ -32,6 +32,8 @@ jobs:
         run: echo '${{ toJSON(strategy) }}'
       - name: Dump matrix context
         run: echo '${{ toJSON(matrix) }}'
+      - name: Checking comment
+        run: echo '${{ toJSON(github.event.comment.body) }}'
 
   automerge:
     needs: [build]

@@ -24,7 +24,7 @@ on:
       commit-message:
         description: 'The commit message template'
         required: false
-        default: 'Release {version} [skip ci]'
+        default: 'Release {version}'
   pull_request:
     types: [closed]
 

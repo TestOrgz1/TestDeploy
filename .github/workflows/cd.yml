@@ -16,7 +16,7 @@ jobs:
         run: |
           echo '${{ toJSON(github.event.pull_request.labels ) }}'
   metadata:
-    if: github.event.pull_request.labels[0].name == 'Release'
+    if: github.event.pull_request.labels[0].name != 'Release'
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context

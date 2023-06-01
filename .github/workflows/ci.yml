@@ -4,7 +4,6 @@ on:
   pull_request:
     branches:
       - 'main'
-      - '!release/**'
 
 jobs:
   build:
@@ -60,6 +59,7 @@ jobs:
         run: echo '${{ github.event.commits[1].message }}'
 
   add_labels:
+    if: github.actor == 'optic-release-automation[bot]'
     runs-on: ubuntu-latest
 
     permissions:

@@ -9,13 +9,12 @@ on:
 
 jobs:
   my-job:
-    if: github.event.pull_request.labels.name
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Write echo
         run: |
-          echo "this is echoworking yah boi" ${{ inputs.release }}
+          echo "this is the label going! yah boi" ${{ github.event }}
   metadata:
     runs-on: ubuntu-latest
     steps:
